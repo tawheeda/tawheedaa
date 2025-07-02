@@ -20,12 +20,13 @@ h1, h2, h3 {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s ease;
 }
 
 /* ---------- Navigation ---------- */
 header {
   background: #fff;
-  padding: 1.2rem 2rem;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -36,9 +37,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -51,54 +50,17 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
   font-weight: 600;
   color: #555;
-  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #000;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #111;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 2rem;
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 200px;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transform: translateX(100%);
-    transition: transform 0.3s ease;
-    display: flex;
-    z-index: 1000;
-  }
-
-  .nav-links.active {
-    transform: translateX(0);
-  }
 }
 
 /* ---------- Hero Section ---------- */
@@ -111,7 +73,6 @@ nav {
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  color: #111;
 }
 
 .hero p {
@@ -129,12 +90,10 @@ nav {
   font-weight: 600;
   letter-spacing: 0.05em;
   transition: background 0.3s ease;
-  text-align: center;
 }
 
 .btn:hover {
   background-color: #555;
-  color: #fff;
 }
 
 /* ---------- About Section ---------- */
@@ -145,7 +104,6 @@ nav {
   align-items: center;
   padding: 4rem 2rem;
   background-color: #fff;
-  color: #222;
 }
 
 .about-text {
@@ -157,14 +115,12 @@ nav {
 .about-text h2 {
   font-size: 2.4rem;
   margin-bottom: 1rem;
-  color: #111;
 }
 
 .about-text a {
   color: #111;
   font-weight: 600;
   border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
 }
 
 .about-text a:hover {
@@ -182,36 +138,37 @@ nav {
   background: #f9f9f9;
   padding: 4rem 2rem;
   text-align: center;
-  color: #333;
 }
 
 .services h2 {
   margin-bottom: 2rem;
-  color: #111;
 }
 
-/* ---------- Testimonials ---------- */
+/* ---------- Testimonials Section ---------- */
 .testimonials {
-  background-color: #fff;
+  background: #fff;
   padding: 4rem 2rem;
   text-align: center;
-  color: #222;
-}
-
-.testimonials h2 {
-  margin-bottom: 2rem;
-  color: #111;
 }
 
 .testimonial {
   max-width: 600px;
   margin: 1rem auto;
-  background-color: #f0f0f0;
+  background: #f0f0f0;
   padding: 1.5rem;
   border-radius: 1rem;
   font-style: italic;
   box-shadow: 0 2px 6px rgba(0,0,0,0.07);
   color: #444;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.8s ease;
+  width: 100%;
+}
+
+.testimonial.active {
+  opacity: 1;
+  position: relative;
 }
 
 .testimonial-slider {
@@ -221,31 +178,11 @@ nav {
   overflow: hidden;
 }
 
-.testimonial {
-  opacity: 0;
-  transition: opacity 0.8s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.testimonial.active {
-  opacity: 1;
-  position: relative;
-}
-
 /* ---------- Contact Section ---------- */
 .contact {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   padding: 4rem 2rem;
   text-align: center;
-  color: #222;
-}
-
-.contact h2 {
-  margin-bottom: 1.5rem;
-  color: #111;
 }
 
 form {
@@ -261,9 +198,7 @@ input, textarea {
   border-radius: 0.5rem;
   border: 1px solid #ccc;
   font-size: 1rem;
-  color: #111;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
+  background: #fff;
 }
 
 input:focus, textarea:focus {
@@ -272,41 +207,24 @@ input:focus, textarea:focus {
 }
 
 button {
-  border: none;
-  cursor: pointer;
-  background-color: #111;
+  background: #111;
   color: #fff;
   padding: 0.8rem 1rem;
+  border: none;
   border-radius: 2rem;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: #555;
-}
-
-.contact button.btn {
-  background-color: #000;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.contact button.btn:hover {
-  background-color: #800040;
+  background: #555;
 }
 
 /* ---------- Projects Section ---------- */
 .projects {
   padding: 4rem 2rem;
   text-align: center;
-  color: #222;
 }
 
 .project-grid {
@@ -317,7 +235,7 @@ button:hover {
 }
 
 .project-card {
-  background-color: #fff;
+  background: #fff;
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 14px rgba(0,0,0,0.07);
@@ -335,33 +253,25 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-.project-card h3 {
-  margin-bottom: 0.5rem;
-  color: #111;
-}
-
 /* ---------- Footer ---------- */
 footer {
-  background-color: #e6e6e6;
+  background: #e6e6e6;
   padding: 2rem 1rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #555;
 }
 
 .socials a {
   margin: 0 0.8rem;
   color: #111;
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
 }
 
 .socials a:hover {
   color: #555;
 }
 
-/* ---------- Table Styles ---------- */
+/* ---------- Tables ---------- */
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -372,27 +282,24 @@ footer {
   width: 100%;
   border-collapse: collapse;
   margin: 0 auto;
-  color: #222;
-  font-family: 'Open Sans', sans-serif;
 }
 
-.table-bordered th,
-.table-bordered td {
+.table th,
+.table td {
   border: 1px solid #999;
   padding: 0.75rem 1rem;
-  vertical-align: middle;
 }
 
 .table-striped tbody tr:nth-child(even) {
-  background-color: #f5f5f5;
+  background: #f5f5f5;
 }
 
 .table-hover tbody tr:hover {
-  background-color: #ddd;
+  background: #ddd;
 }
 
 .table-light th {
-  background-color: #e9ecef;
+  background: #e9ecef;
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
@@ -429,17 +336,14 @@ footer {
     font-weight: bold;
     display: block;
     margin-bottom: 0.3rem;
-    color: #000;
   }
 }
 
 /* ---------- Popup Overlay ---------- */
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0,0,0,0.7);
   display: none;
   justify-content: center;
@@ -453,20 +357,16 @@ footer {
   max-width: 500px;
   width: 90%;
   border-radius: 1rem;
-  text-align: left;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .popup h2 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #111;
 }
 
 .popup label {
   display: block;
   margin: 1rem 0 0.5rem;
-  font-weight: 600;
 }
 
 .popup input,
@@ -475,7 +375,6 @@ footer {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
-  font-size: 1rem;
 }
 
 .popup-buttons {
@@ -486,6 +385,6 @@ footer {
 }
 
 .btn-cancel {
-  background-color: #ccc;
+  background: #ccc;
   color: #333;
 }
