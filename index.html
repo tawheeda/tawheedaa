@@ -3,13 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LT Dev Studio | Home </title>
-  <link href="logo.png" rel="icon">
-  <link rel="stylesheet" href="styles.css" /><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LT Dev Studio</title>
   <link href="logo.png" rel="icon">
   <link rel="stylesheet" href="styles.css" />
@@ -22,8 +15,8 @@
 <header>
   <nav>
     <div class="logo">LT Dev Studio</div>
-    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-    <ul class="nav-links">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
@@ -32,6 +25,7 @@
     </ul>
   </nav>
 </header>
+
 
 
 
@@ -47,7 +41,7 @@
 
 <section id="about" class="about" data-aos="fade-up">
   <div class="about-text">
-    <h2>Hello, I'm LaOne </h2>
+    <h2>Hello, I'm LaOne 👋</h2>
     <p>
       I'm a passionate and detail-oriented freelance web developer with a flair for elegant designs and clean, functional code. I specialize in both frontend and backend development, using technologies like HTML, CSS, JavaScript, and ASP.NET Core to bring digital ideas to life.
     </p>
@@ -150,45 +144,57 @@
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-  const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
-  let currentIndex = 0;
-  const delay = 5000; // 5 seconds per testimonial
+  document.addEventListener('DOMContentLoaded', () => {
+    // ---------- Testimonial Slider ----------
+    const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
+    let currentIndex = 0;
+    const delay = 5000;
 
-  function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.classList.toggle('active', i === index);
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextTestimonial() {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(currentIndex);
+    }
+
+    if (testimonials.length > 0) {
+      showTestimonial(currentIndex);
+      setInterval(nextTestimonial, delay);
+    }
+
+    // ---------- Mobile Nav Toggle ----------
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
     });
-  }
 
-  function nextTestimonial() {
-    currentIndex = (currentIndex + 1) % testimonials.length;
-    showTestimonial(currentIndex);
-  }
+    // Close menu on nav link click (mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+        }
+      });
+    });
 
-  // Initialize
-  showTestimonial(currentIndex);
-  setInterval(nextTestimonial, delay);
-});
+    // ---------- Popup Form Logic ----------
+    window.openIdeaForm = function () {
+      document.getElementById("ideaFormOverlay").style.display = "flex";
+    };
 
-  // Toggle nav on small screens
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    window.closeIdeaForm = function () {
+      document.getElementById("ideaFormOverlay").style.display = "none";
+    };
   });
-
-  function openIdeaForm() {
-    document.getElementById("ideaFormOverlay").style.display = "flex";
-  }
-
-  function closeIdeaForm() {
-    document.getElementById("ideaFormOverlay").style.display = "none";
-  }
 </script>
+
 
 
 </body>
 </html>
-
