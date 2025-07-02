@@ -9,6 +9,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+      }
+
+      thead {
+        display: none;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        background: #fff;
+      }
+
+      td {
+        text-align: left;
+        padding: 0.5rem;
+        position: relative;
+      }
+
+      td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 0.3rem;
+        color: #000;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,9 +62,9 @@
 
 <section class="services container py-5" data-aos="fade-up">
   <h2 class="text-center text-uppercase mb-4" style="color: #000000;">Web Design & Development Services 💅</h2>
-
   <p class="text-center mb-5">Affordable, professional web solutions tailored for individuals, small businesses, and startups.</p>
-<br>
+  <br>
+
   <!-- Project Tiers -->
   <h3 class="mb-3" style="color:#000000;">💼 Project Tiers</h3><br>
   <div class="table-responsive mb-5">
@@ -45,27 +79,28 @@
       </thead>
       <tbody>
         <tr>
-          <td><strong>Basic</strong></td>
-          <td>R2,000 – R3,000</td>
-          <td>Small businesses, portfolios</td>
-          <td>3–4 page static site, mobile responsive, contact form, landing page</td>
+          <td data-label="Tier"><strong>Basic</strong></td>
+          <td data-label="Price (ZAR)">R2,000 – R3,000</td>
+          <td data-label="Ideal For">Small businesses, portfolios</td>
+          <td data-label="Includes">3–4 page static site, mobile responsive, contact form, landing page</td>
         </tr>
         <tr>
-          <td><strong>Standard</strong></td>
-          <td>R4,000 – R5,500</td>
-          <td>SMEs, startups</td>
-          <td>ASP.NET Core MVC site or simple e-commerce, up to 6 pages, admin panel or product catalog</td>
+          <td data-label="Tier"><strong>Standard</strong></td>
+          <td data-label="Price (ZAR)">R4,000 – R5,500</td>
+          <td data-label="Ideal For">SMEs, startups</td>
+          <td data-label="Includes">ASP.NET Core MVC site or simple e-commerce, up to 6 pages, admin panel or product catalog</td>
         </tr>
         <tr>
-          <td><strong>Premium</strong></td>
-          <td>R6,000 – R9,000+</td>
-          <td>Custom web apps or full-featured e-commerce</td>
-          <td>Login/auth, payment integration, dashboards, advanced backend logic</td>
+          <td data-label="Tier"><strong>Premium</strong></td>
+          <td data-label="Price (ZAR)">R6,000 – R9,000+</td>
+          <td data-label="Ideal For">Custom web apps or full-featured e-commerce</td>
+          <td data-label="Includes">Login/auth, payment integration, dashboards, advanced backend logic</td>
         </tr>
       </tbody>
     </table>
   </div>
-<br>
+  <br>
+
   <!-- Extra Services -->
   <h3 class="mb-3" style="color:#000000;">🛠️ Additional Services</h3><br>
   <div class="table-responsive">
@@ -78,30 +113,31 @@
       </thead>
       <tbody>
         <tr>
-          <td>Maintenance (monthly)</td>
-          <td>R800 – R1,500/mo</td>
+          <td data-label="Service">Maintenance (monthly)</td>
+          <td data-label="Price Range (ZAR)">R800 – R1,500/mo</td>
         </tr>
         <tr>
-          <td>SEO setup (basic)</td>
-          <td>R700 – R1,200</td>
+          <td data-label="Service">SEO setup (basic)</td>
+          <td data-label="Price Range (ZAR)">R700 – R1,200</td>
         </tr>
         <tr>
-          <td>Hosting & domain setup</td>
-          <td>R500 – R1,000</td>
+          <td data-label="Service">Hosting & domain setup</td>
+          <td data-label="Price Range (ZAR)">R500 – R1,000</td>
         </tr>
         <tr>
-          <td>Content upload & images</td>
-          <td>R300 – R800</td>
+          <td data-label="Service">Content upload & images</td>
+          <td data-label="Price Range (ZAR)">R300 – R800</td>
         </tr>
         <tr>
-          <td>Bug fixes post-launch</td>
-          <td>Free for 2 weeks, then hourly or R500+</td>
+          <td data-label="Service">Bug fixes post-launch</td>
+          <td data-label="Price Range (ZAR)">Free for 2 weeks, then hourly or R500+</td>
         </tr>
       </tbody>
     </table>
   </div>
 </section>
 <br><br>
+
 <footer>
   <p>&copy; 2025 LT Dev Studio. All rights reserved.</p>
   <div class="socials">
@@ -109,27 +145,6 @@
     <a href="github.com/tawheeda">GitHub</a>
   </div>
 </footer>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
-  });
-
-  // Optional: close menu when link is clicked
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        menuToggle.textContent = '☰';
-      }
-    });
-  });
-});
-</script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
