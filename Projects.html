@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projects |</title>
+  <title>LT Dev Studio</title>
+  <link href="logo.png" rel="icon">
   <link rel="stylesheet" href="styles.css" />
-  <!-- AOS Animation CDN -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -20,6 +22,7 @@
     </ul>
   </nav>
 </header>
+
 
 <section class="projects">
   <h2>My Projects</h2>
@@ -79,57 +82,14 @@
 <script>
   AOS.init();
 </script>
-
 <script>
-const toggleButton = document.getElementById('darkModeToggle');
-
-function enableDarkMode() {
-    document.body.classList.add('dark-mode');
-    toggleButton.textContent = '☀️';
-    localStorage.setItem('theme', 'dark');
-}
-
-function disableDarkMode() {
-    document.body.classList.remove('dark-mode');
-    toggleButton.textContent = '🌙';
-    localStorage.setItem('theme', 'light');
-}
-
-toggleButton.addEventListener('click', () => {
-    if (localStorage.getItem('theme') === 'dark') {
-        disableDarkMode();
-    } else {
-        enableDarkMode();
-    }
-});
-
-if (localStorage.getItem('theme') === 'dark') {
-    enableDarkMode();
-} else {
-    disableDarkMode();
-}
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+  // Toggle nav on small screens
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
   });
-
-  // Optional: close menu when link is clicked
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        menuToggle.textContent = '☰';
-      }
-    });
-  });
-});
 </script>
-
 </body>
 </html>
