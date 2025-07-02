@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects |</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- AOS Animation CDN -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">LT Dev Studio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+    </ul>
+
+
+  </nav>
+</header>
+
+<section class="projects">
+  <h2>My Projects</h2>
+
+  <div class="project-grid">
+    <div class="project-card">
+      <img src="portfolio.PNG" alt="Project 1">
+      <h3>Resume Portfolio</h3>
+      <p>
+          A personal portfolio site built with ASP.NET Core and Chart.js. It showcases my skills, work experience, services, and projects I've completed or am currently building. The site is live and still evolving!
+      </p><br>
+      <a href="https://github.com/tawheeda/MyResumePortfolio" target="_blank" class="btn">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <img src="hiremetools.PNG" alt="Project 2">
+      <h3>Hire Me Tools</h3>
+      <p>
+          <strong>Hire Me Tools</strong> is a rental platform for construction tools. Users can register, manage their rentals, and track deposits. Admins can oversee users, tools, and transactions through a clean dashboard. Built with C# and ASP.NET Core MVC.
+      </p><br>
+      <a href="https://github.com/tawheeda/HireMeTools" target="_blank" class="btn">View on GitHub</a>
+    </div>
+
+        <div class="project-card">
+      <img src="daf.PNG" alt="Project 2">
+      <h3>Disaster Alleviation Foundation Web App</h3>
+      <p>
+        A web app built for a non-profit that supports disaster relief. It tracks donations—both goods and monetary—and manages how they're distributed for active relief efforts. Developed with C# and ASP.NET Core.
+      </p><br>
+      <a href="https://github.com/tawheeda/Disaster-Alleviation-Foundation-POE" target="_blank" class="btn">View on GitHub</a>
+    </div>
+
+        <div class="project-card">
+      <img src="baggr.PNG" alt="Project 2">
+      <h3>Baggr</h3>
+      <p>
+        <strong>Baggr</strong> is a peer-to-peer trading platform made for South Africans to buy and sell safely.
+        This landing page includes a clean layout with a bold headline, a waitlist signup form,
+        and a modern logo. Visitors are encouraged to join the waitlist for early access, while
+        the site builds anticipation for the full launch with a “Coming Soon” tag and contact option.
+     </p><br>
+      <a href="https://github.com/tawheeda/Baggr" target="_blank" class="btn">View on GitHub</a>
+    </div>
+    <!-- Add more projects -->
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 LT Dev Studio. All rights reserved.</p>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/laone-setlhoke-856503167">LinkedIn</a>
+    <a href="github.com/tawheeda">GitHub</a>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+const toggleButton = document.getElementById('darkModeToggle');
+
+function enableDarkMode() {
+    document.body.classList.add('dark-mode');
+    toggleButton.textContent = '☀️';
+    localStorage.setItem('theme', 'dark');
+}
+
+function disableDarkMode() {
+    document.body.classList.remove('dark-mode');
+    toggleButton.textContent = '🌙';
+    localStorage.setItem('theme', 'light');
+}
+
+toggleButton.addEventListener('click', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+        disableDarkMode();
+    } else {
+        enableDarkMode();
+    }
+});
+
+if (localStorage.getItem('theme') === 'dark') {
+    enableDarkMode();
+} else {
+    disableDarkMode();
+}
+</script>
+
+</body>
+</html>
