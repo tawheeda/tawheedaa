@@ -559,3 +559,60 @@ footer {
     color: #000;
   }
 }
+
+/* ---------- Popup Overlay ---------- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup {
+  background: #fff;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 1rem;
+  text-align: left;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.popup h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.popup label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.popup input,
+.popup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+  color: #333;
+}
