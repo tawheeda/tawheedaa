@@ -458,3 +458,36 @@ footer {
   background-color: #555;
   color: #fff; /* retain white text on hover */
 }
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none; /* hide headers on small screens */
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background: #fff;
+  }
+
+  td {
+    text-align: left;
+    padding: 0.5rem;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #000;
+  }
+}
