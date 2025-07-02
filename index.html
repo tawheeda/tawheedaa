@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LaOne Freelance Studio</title>
+  <title>LT Dev Studio</title>
   <link href="logo.png" rel="icon">
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -24,6 +25,7 @@
     </ul>
   </nav>
 </header>
+
 
 
 <section class="hero">
@@ -140,28 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
   showTestimonial(currentIndex);
   setInterval(nextTestimonial, delay);
 });
-</script>
 
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
+  // Toggle nav on small screens
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
   });
-
-  // Optional: close menu when link is clicked
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        menuToggle.textContent = '☰';
-      }
-    });
-  });
-});
 </script>
 
 
