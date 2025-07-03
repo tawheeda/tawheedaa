@@ -15,6 +15,7 @@
 <header>
   <nav>
     <div class="logo">LT Dev Studio</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
@@ -24,6 +25,7 @@
     </ul>
   </nav>
 </header>
+
 
 
 
@@ -99,7 +101,7 @@
 
 <section id="contact" class="contact">
   <h2>Get In Touch</h2>
-  <form action="https://formspree.io/f/xeokdovk" method="POST">
+  <form action="https://getform.io/f/bwnwmpxa" method="POST">
     <input type="hidden" name="_captcha" value="false">
     <input type="text" name="name" placeholder="Your Name" required/>
     <input type="email" name="email" placeholder="Your Email" required/>
@@ -120,7 +122,7 @@
 <div id="ideaFormOverlay" class="overlay">
   <div class="popup">
     <h2>Suggest What I Should Build Next 💡</h2>
-    <form action="https://formspree.io/f/xrbkdqlv" method="POST">
+    <form action="https://getform.io/f/bwnwmpxa" method="POST">
       <label for="idea">Your idea:</label>
       <textarea id="idea" name="idea" rows="5" placeholder="E.g. Build a budgeting app, a portfolio template, etc." required></textarea>
 
@@ -175,9 +177,15 @@
       document.getElementById("ideaFormOverlay").style.display = "none";
     };
   });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
 </script>
-
-
-
 </body>
 </html>
