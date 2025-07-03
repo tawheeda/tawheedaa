@@ -1,4 +1,4 @@
-/* ---------- Base Styles ---------- */
+/* ==================== Base Reset ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,18 +12,18 @@ body {
   background-color: #f9f9f9;
 }
 
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #111;
-}
-
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
 }
 
-/* ---------- Navigation ---------- */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #111;
+}
+
+/* ==================== Navigation ==================== */
 header {
   background: #fff;
   padding: 1rem 2rem;
@@ -95,7 +95,27 @@ nav {
   }
 }
 
-/* ---------- Hero Section ---------- */
+/* ==================== Buttons ==================== */
+.btn,
+button {
+  display: inline-block;
+  background-color: #111;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #555;
+}
+
+/* ==================== Hero Section ==================== */
 .hero {
   background: linear-gradient(to right, #e0e0e0, #f5f5f5);
   padding: 5rem 2rem;
@@ -113,22 +133,7 @@ nav {
   margin-bottom: 1.5rem;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #111;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 2rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #555;
-}
-
-/* ---------- About Section ---------- */
+/* ==================== About Section ==================== */
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -155,7 +160,7 @@ nav {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Services Section ---------- */
+/* ==================== Services Section ==================== */
 .services {
   background: #f9f9f9;
   padding: 4rem 2rem;
@@ -166,7 +171,7 @@ nav {
   margin-bottom: 2rem;
 }
 
-/* ---------- Testimonials Section ---------- */
+/* ==================== Testimonials Section ==================== */
 .testimonials {
   background: #fff;
   padding: 4rem 2rem;
@@ -198,7 +203,7 @@ nav {
   position: relative;
 }
 
-/* ---------- Contact Section ---------- */
+/* ==================== Contact Section ==================== */
 .contact {
   background: #f5f5f5;
   padding: 4rem 2rem;
@@ -213,7 +218,8 @@ form {
   gap: 1rem;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid #ccc;
@@ -221,27 +227,13 @@ input, textarea {
   background: #fff;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
   border-color: #111;
 }
 
-button {
-  background: #111;
-  color: #fff;
-  padding: 0.8rem 1rem;
-  border: none;
-  border-radius: 2rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #555;
-}
-
-/* ---------- Projects Section ---------- */
+/* ==================== Projects Section ==================== */
 .projects {
   padding: 4rem 2rem;
   text-align: center;
@@ -273,7 +265,7 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-/* ---------- Footer ---------- */
+/* ==================== Footer ==================== */
 footer {
   background: #e6e6e6;
   padding: 2rem 1rem;
