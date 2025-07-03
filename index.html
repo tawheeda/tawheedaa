@@ -12,180 +12,162 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="logo">LT Dev Studio</div>
-    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="Projects.html">Projects</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <div class="logo">LT Dev Studio</div>
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="Projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <div class="hero-text">
+      <h1>LT Dev Studio</h1>
+      <h2 class="slogan">Your Vision, Brought to Life Online.</h2>
+      <p>It’s warm, client-focused, and communicates that your work is custom, thoughtful, and results-driven.</p>
+      <a href="#contact" class="btn">Work With Me</a>
+    </div>
+  </section>
 
-
-
-
-
-<section class="hero">
-  <div class="hero-text">
-    <h1>LT Dev Studio</h1>
-    <h2 class="slogan">Your Vision, Brought to Life Online.</h2>
-    <p>It’s warm, client-focused, and communicates that your work is custom, thoughtful, and results-driven.</p>
-    <a href="#contact" class="btn">Work With Me</a>
-  </div>
-</section>
-
-
-<section id="about" class="about" data-aos="fade-up">
-  <div class="about-text">
-    <h2>Hello, I'm LaOne </h2>
-    <p>
-      I'm a passionate and detail-oriented freelance web developer with a flair for elegant designs and clean, functional code. I specialize in both frontend and backend development, using technologies like HTML, CSS, JavaScript, and ASP.NET Core to bring digital ideas to life.
-    </p>
-    <p>
+  <section id="about" class="about" data-aos="fade-up">
+    <div class="about-text">
+      <h2>Hello, I'm LaOne</h2>
+      <p>I'm a passionate and detail-oriented freelance web developer with a flair for elegant designs and clean, functional code. I specialize in both frontend and backend development, using technologies like HTML, CSS, JavaScript, and ASP.NET Core to bring digital ideas to life.</p>
+      <p><br>Whether you're a small business owner needing a polished web presence, a startup seeking a scalable solution, or someone with a vision that needs building — I'm here to help. I believe in clear communication, thoughtful design, and reliable delivery.</p>
+      <p>You're not just hiring a developer — you're gaining a partner who’s genuinely invested in your success.</p>
+      <p><strong>Let’s build something amazing together.</strong></p>
       <br>
-      Whether you're a small business owner needing a polished web presence, a startup seeking a scalable solution, or someone with a vision that needs building — I'm here to help. I believe in clear communication, thoughtful design, and reliable delivery.
-    </p>
-    <p>
-      You're not just hiring a developer — you're gaining a partner who’s genuinely invested in your success.
-    </p>
-    <p>
-      <strong>Let’s build something amazing together.</strong>
-    </p>
-    <br>
-        <a href="#" class="btn" style="color: #fff" onclick="openIdeaForm()">Let's Build</a>
-
-  </div>
-  <div class="about-img">
-    <img src="taweezy.jpg" alt="LaOne portrait" />
-  </div>
-</section>
-
-
-
-<section id="services" class="services">
-  <h2>What I Offer</h2>
-  <ul>
-    <li><strong>🌐 Web Development</strong> – Static & dynamic websites built with HTML, CSS, JS, and ASP.NET Core</li>
-    <li><strong>🛒 E-commerce</strong> – Beautiful online stores with payment integration</li>
-    <li><strong>🛠 Website Maintenance</strong> – Updates, fixes, performance optimization</li>
-    <li><strong>🎨 UI/UX Design</strong> – Clean interfaces that are easy to use</li>
-  </ul>
-
-  <p>For More Details, go to: <br> <br> <a href="services.html" class="btn">Services</a> </p>
-</section>
-
-<section id="testimonials" class="testimonials">
-  <h2>Client Testimonials 💬</h2>
-  <div class="testimonial-slider">
-    <div class="testimonial active">
-      <p>"LaOne was amazing to work with! She delivered everything ahead of schedule and exceeded my expectations."</p>
-      <span>– A. Smith, Business Owner</span>
+      <a href="#" class="btn" style="color: #fff" onclick="openIdeaForm()">Let's Build</a>
     </div>
-    <div class="testimonial">
-      <p>"Great attention to detail and really listened to what I wanted. Highly recommend!"</p>
-      <span>– J. Patel, Designer</span>
+    <div class="about-img">
+      <img src="taweezy.jpg" alt="LaOne portrait" />
     </div>
-    <div class="testimonial">
-      <p>"Professional, efficient, and easy to communicate with. The site looks beautiful!"</p>
-      <span>– K. Dlamini, Entrepreneur</span>
-    </div>
-  </div>
-</section>
+  </section>
 
+  <section id="services" class="services">
+    <h2>What I Offer</h2>
+    <ul>
+      <li><strong>🌐 Web Development</strong> – Static & dynamic websites built with HTML, CSS, JS, and ASP.NET Core</li>
+      <li><strong>🛒 E-commerce</strong> – Beautiful online stores with payment integration</li>
+      <li><strong>🛠 Website Maintenance</strong> – Updates, fixes, performance optimization</li>
+      <li><strong>🎨 UI/UX Design</strong> – Clean interfaces that are easy to use</li>
+    </ul>
+    <p>For More Details, go to: <br><br><a href="services.html" class="btn">Services</a></p>
+  </section>
 
-<section id="contact" class="contact">
-  <h2>Get In Touch</h2>
-  <form action="https://getform.io/f/bwnwmpxa" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required/>
-    <input type="email" name="email" placeholder="Your Email" required/>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-</section>
-
-
-<footer>
-  <p>&copy; 2025 LT Dev Studio. All rights reserved.</p>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/laone-setlhoke-856503167">LinkedIn</a>
-    <a href="github.com/tawheeda">GitHub</a>
-  </div>
-</footer>
-
-<div id="ideaFormOverlay" class="overlay">
-  <div class="popup">
-    <h2>Suggest What I Should Build Next 💡</h2>
-    <form action="https://getform.io/f/bwnwmpxa" method="POST">
-      <label for="idea">Your idea:</label>
-      <textarea id="idea" name="idea" rows="5" placeholder="E.g. Build a budgeting app, a portfolio template, etc." required></textarea>
-
-      <label for="email">Optional: Your email (if you'd like a reply)</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" />
-
-      <!-- Optional honeypot field for spam bots -->
-      <input type="text" name="_gotcha" style="display:none">
-
-      <div class="popup-buttons">
-        <button type="submit" class="btn">Submit</button>
-        <button type="button" class="btn btn-cancel" onclick="closeIdeaForm()">Cancel</button>
+  <section id="testimonials" class="testimonials">
+    <h2>Client Testimonials 💬</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial active">
+        <p>"LaOne was amazing to work with! She delivered everything ahead of schedule and exceeded my expectations."</p>
+        <span>– A. Smith, Business Owner</span>
       </div>
+      <div class="testimonial">
+        <p>"Great attention to detail and really listened to what I wanted. Highly recommend!"</p>
+        <span>– J. Patel, Designer</span>
+      </div>
+      <div class="testimonial">
+        <p>"Professional, efficient, and easy to communicate with. The site looks beautiful!"</p>
+        <span>– K. Dlamini, Entrepreneur</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get In Touch</h2>
+    <form action="https://getform.io/f/bwnwmpxa" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
     </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LT Dev Studio. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/laone-setlhoke-856503167">LinkedIn</a>
+      <a href="https://github.com/tawheeda">GitHub</a>
+    </div>
+  </footer>
+
+  <div id="ideaFormOverlay" class="overlay">
+    <div class="popup">
+      <h2>Suggest What I Should Build Next 💡</h2>
+      <form action="https://getform.io/f/bwnwmpxa" method="POST">
+        <label for="idea">Your idea:</label>
+        <textarea id="idea" name="idea" rows="5" placeholder="E.g. Build a budgeting app, a portfolio template, etc." required></textarea>
+        <label for="email">Optional: Your email (if you'd like a reply)</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" />
+        <input type="text" name="_gotcha" style="display:none">
+        <div class="popup-buttons">
+          <button type="submit" class="btn">Submit</button>
+          <button type="button" class="btn btn-cancel" onclick="closeIdeaForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // ---------- Testimonial Slider ----------
-    const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
-    let currentIndex = 0;
-    const delay = 5000;
-
-    function showTestimonial(index) {
-      testimonials.forEach((testimonial, i) => {
-        testimonial.classList.toggle('active', i === index);
-      });
-    }
-
-    function nextTestimonial() {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      showTestimonial(currentIndex);
-    }
-
-    if (testimonials.length > 0) {
-      showTestimonial(currentIndex);
-      setInterval(nextTestimonial, delay);
-    }
-
-    // ---------- Popup Form Logic ----------
-    window.openIdeaForm = function () {
-      document.getElementById("ideaFormOverlay").style.display = "flex";
-    };
-
-    window.closeIdeaForm = function () {
-      document.getElementById("ideaFormOverlay").style.display = "none";
-    };
-  });
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
     document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+      // Testimonial slider
+      const testimonials = document.querySelectorAll('.testimonial-slider .testimonial');
+      let currentIndex = 0;
+      const delay = 5000;
 
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+          testimonial.classList.toggle('active', i === index);
+        });
+      }
+
+      function nextTestimonial() {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showTestimonial(currentIndex);
+      }
+
+      if (testimonials.length > 0) {
+        showTestimonial(currentIndex);
+        setInterval(nextTestimonial, delay);
+      }
+
+      // Mobile navigation toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+
+      // Close mobile menu on link click
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+          }
+        });
+      });
+
+      // Popup form logic
+      window.openIdeaForm = function () {
+        document.getElementById("ideaFormOverlay").style.display = "flex";
+      };
+
+      window.closeIdeaForm = function () {
+        document.getElementById("ideaFormOverlay").style.display = "none";
+      };
     });
-  });
-</script>
+  </script>
+
 </body>
 </html>
