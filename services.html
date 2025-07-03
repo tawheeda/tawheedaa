@@ -51,12 +51,14 @@
 <header>
   <nav>
     <div class="logo">LT Dev Studio</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="Projects.html">Projects</a></li>
     </ul>
   </nav>
 </header>
+
 
 <section class="services container py-5" data-aos="fade-up">
   <h2 class="text-center text-uppercase mb-4" style="color: #000;">Web Design & Development Services 💅</h2>
@@ -144,6 +146,16 @@
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
 </script>
 
 </body>
