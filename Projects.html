@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LT Dev Studio</title>
-  <link href="logo.png" rel="icon">
+  <title>LT Dev Studio - Projects</title>
+  <link rel="icon" href="logo.png">
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
@@ -12,85 +12,91 @@
 </head>
 <body>
 
-<header>
-  <nav>
-    <div class="logo">LT Dev Studio</div>
-    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <div class="logo">LT Dev Studio</div>
+      <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="projects">
+    <h2>My Projects</h2>
 
-<section class="projects">
-  <h2>My Projects</h2>
+    <div class="project-grid">
 
-  <div class="project-grid">
-    <div class="project-card">
-      <img src="portfolio.PNG" alt="Project 1">
-      <h3>Resume Portfolio</h3>
-      <p>
-        A personal portfolio site built with ASP.NET Core and Chart.js. It showcases my skills, work experience, services, and projects I've completed or am currently building. The site is live and still evolving!
-      </p><br>
-      <a href="https://github.com/tawheeda/MyResumePortfolio" target="_blank" class="btn">View on GitHub</a>
+      <div class="project-card" data-aos="fade-up">
+        <img src="portfolio.PNG" alt="Resume Portfolio Screenshot">
+        <h3>Resume Portfolio</h3>
+        <p>
+          A personal portfolio site built with ASP.NET Core and Chart.js, showcasing skills, work experience, services, and projects in a clean, evolving interface.
+        </p>
+        <a href="https://github.com/tawheeda/MyResumePortfolio" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="hiremetools.PNG" alt="Hire Me Tools Screenshot">
+        <h3>Hire Me Tools</h3>
+        <p>
+          A rental platform for construction tools where users can register, manage rentals, and track deposits, while admins oversee users, tools, and transactions via a clean dashboard. Built with C# and ASP.NET Core MVC.
+        </p>
+        <a href="https://github.com/tawheeda/HireMeTools" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="daf.PNG" alt="Disaster Alleviation Foundation Screenshot">
+        <h3>Disaster Alleviation Foundation Web App</h3>
+        <p>
+          A web app for a non-profit supporting disaster relief, tracking donations (goods and monetary) and managing distributions for active relief efforts. Developed with C# and ASP.NET Core.
+        </p>
+        <a href="https://github.com/tawheeda/Disaster-Alleviation-Foundation-POE" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="baggr.PNG" alt="Baggr Landing Page Screenshot">
+        <h3>Baggr</h3>
+        <p>
+          A peer-to-peer trading platform landing page for South Africans, featuring a clean layout, bold headline, waitlist signup form, and modern branding to build anticipation for launch.
+        </p>
+        <a href="https://github.com/tawheeda/Baggr" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
     </div>
+  </section>
 
-    <div class="project-card">
-      <img src="hiremetools.PNG" alt="Project 2">
-      <h3>Hire Me Tools</h3>
-      <p>
-        <strong>Hire Me Tools</strong> is a rental platform for construction tools. Users can register, manage their rentals, and track deposits. Admins can oversee users, tools, and transactions through a clean dashboard. Built with C# and ASP.NET Core MVC.
-      </p><br>
-      <a href="https://github.com/tawheeda/HireMeTools" target="_blank" class="btn">View on GitHub</a>
+  <footer>
+    <p>&copy; 2025 LT Dev Studio. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/laone-setlhoke-856503167" target="_blank">LinkedIn</a>
+      <a href="https://github.com/tawheeda" target="_blank">GitHub</a>
     </div>
+  </footer>
 
-    <div class="project-card">
-      <img src="daf.PNG" alt="Project 3">
-      <h3>Disaster Alleviation Foundation Web App</h3>
-      <p>
-        A web app built for a non-profit that supports disaster relief. It tracks donations—both goods and monetary—and manages how they're distributed for active relief efforts. Developed with C# and ASP.NET Core.
-      </p><br>
-      <a href="https://github.com/tawheeda/Disaster-Alleviation-Foundation-POE" target="_blank" class="btn">View on GitHub</a>
-    </div>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-    <div class="project-card">
-      <img src="baggr.PNG" alt="Project 4">
-      <h3>Baggr</h3>
-      <p>
-        <strong>Baggr</strong> is a peer-to-peer trading platform made for South Africans to buy and sell safely.
-        This landing page includes a clean layout with a bold headline, a waitlist signup form,
-        and a modern logo. Visitors are encouraged to join the waitlist for early access, while
-        the site builds anticipation for the full launch with a “Coming Soon” tag and contact option.
-      </p><br>
-      <a href="https://github.com/tawheeda/Baggr" target="_blank" class="btn">View on GitHub</a>
-    </div>
-  </div>
-</section>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
 
-<footer>
-  <p>&copy; 2025 LT Dev Studio. All rights reserved.</p>
-  <div class="socials">
-    <a href="https://www.linkedin.com/in/laone-setlhoke-856503167">LinkedIn</a>
-    <a href="https://github.com/tawheeda">GitHub</a>
-  </div>
-</footer>
+      menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      // Close nav on link click for mobile
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+          }
+        });
+      });
     });
-  });
-</script>
+  </script>
+  
 </body>
 </html>
