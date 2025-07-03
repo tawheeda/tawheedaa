@@ -24,6 +24,7 @@ a {
 }
 
 /* ---------- Navigation ---------- */
+/* ---------- Navigation ---------- */
 header {
   background: #fff;
   padding: 1rem 2rem;
@@ -37,7 +38,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -47,21 +47,55 @@ nav {
   color: #111;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #111;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .nav-links a {
   font-weight: 600;
   color: #555;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #000;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 2rem;
+    background: #fff;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 
 /* ---------- Hero Section ---------- */
 .hero {
